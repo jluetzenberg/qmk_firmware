@@ -18,23 +18,19 @@
 
 #pragma once
 
-/* Handedness. */
-#define SPLIT_HAND_PIN GP29
-#define SPLIT_HAND_PIN_LOW_IS_LEFT // High -> right, Low -> left.
+/* VBUS detection. */ // TODO: what is this for?
+// #define USB_VBUS_PIN GP19
 
-/* VBUS detection. */
-#define USB_VBUS_PIN GP19
-
-/* CRC. */
-#define CRC8_USE_TABLE
-#define CRC8_OPTIMIZE_SPEED
+/* CRC. */ // TODO: what is this for?
+// #define CRC8_USE_TABLE
+// #define CRC8_OPTIMIZE_SPEED
 
 /* Cirque trackpad over SPI. */
 #define SPI_DRIVER SPID0
-#define SPI_SCK_PIN GP22
-#define SPI_MOSI_PIN GP23
-#define SPI_MISO_PIN GP20
-#define POINTING_DEVICE_CS_PIN GP21
+#define SPI_SCK_PIN GP0
+#define SPI_MOSI_PIN GP3
+#define SPI_MISO_PIN GP1
+#define POINTING_DEVICE_CS_PIN GP2
 #undef CIRQUE_PINNACLE_DIAMETER_MM
 #define CIRQUE_PINNACLE_DIAMETER_MM 40
 

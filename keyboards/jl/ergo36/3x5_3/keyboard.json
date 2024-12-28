@@ -1,7 +1,9 @@
 {
+    "manufacturer": "jeff",
     "usb": {
         "device_version": "2.0.0",
-        "pid": "0x1836"
+        "vid": "0x1209",
+        "pid": "0x1896"
     },
     "processor": "RP2040",
     "bootloader": "rp2040",
