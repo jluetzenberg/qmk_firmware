@@ -40,6 +40,8 @@ To get this to work, I used:
     / the exact same error shows up
 
     / Going to try the docker approach
+> util/docker_build.sh planck/rev6:default
+    / succeeded
 */
 
 enum dilemma_keymap_layers {
