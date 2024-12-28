@@ -73,5 +73,6 @@ fi
 	-e SKIP_GIT="$SKIP_GIT" \
 	-e SKIP_VERSION="$SKIP_VERSION" \
 	-e MAKEFLAGS="$MAKEFLAGS" \
+	-e USER="$USER" \
 	ghcr.io/qmk/qmk_cli \
 	"$@"

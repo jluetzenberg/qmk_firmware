@@ -42,6 +42,12 @@ To get this to work, I used:
     / Going to try the docker approach
 > util/docker_build.sh planck/rev6:default
     / succeeded
+
+    / docker build is working but the flashed firmware is not working
+    / still getting the assert.h issue, so trying:
+> sudo zypper install -t pattern devel_C_C++
+    / but no luck. gpt advised
+> sudo zypper install cross-avr-binutils cross-avr-gcc cross-avr-gcc-c++ cross-avr-libc
 */
 
 enum dilemma_keymap_layers {
