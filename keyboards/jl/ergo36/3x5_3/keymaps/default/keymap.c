@@ -17,6 +17,30 @@
 
 #include QMK_KEYBOARD_H
 
+/*
+To get this to work, I used:
+> pipx install qmk
+> sudo zypper install arm-none-eabi-gcc
+> sudo zypper install avr-gcc avrdude dfu-programmer dfu-util
+> sudo zypper addrepo https://download.opensuse.org/repositories/CrossToolchain:avr/openSUSE_Tumbleweed/CrossToolchain:avr.repo
+> sudo zypper refresh
+> sudo zypper install cross-avr-gcc
+> qmk setup -H ~/Projects/qmk_firmware
+> sudo cp /home/jeff/Projects/qmk_firmware/util/udev/50-qmk.rules /etc/udev/rules.d/
+    / error happens when I try to run > qmk compile -kb clueboard/66/rev3 -km default
+    / error is that avr/pgmspace.h is not found
+    / ////// gpt output: I found the file in /usr/lib64/gcc/avr/10.3.0/include/pgmspace.h
+    / based on the above, I found that there wasn't an avr directory in gcc, so installing
+> sudo zypper install avr-libc
+    / same error present. going to just go for it on my controller
+> qmk compile -kb jl/ergo36/3x5_3 -km default
+    error: common/pico_base/include/pico/assert.h: assert.h: No such file or directory
+    / based on what that seems to mean is that I'm missing essential c dev tools
+> sudo zypper install -t pattern devel_basis
+    / the exact same error shows up
+
+    / Going to try the docker approach
+*/
 
 enum dilemma_keymap_layers {
      L_QWERTY = 0,
