@@ -19,10 +19,10 @@
                 "pins": [
                     {"pin": "38", "name": "ground", "color": "white solid core, dp white" },
                     {"pin": "36", "name": "3v3 out, to trackpad", "color": "red solid core, dp black" },
-                    {"pin": "01", "name": "MISO", "color": "DP - grey" },
-                    {"pin": "02", "name": "MOSI", "color": "DP - blue" },
-                    {"pin": "04", "name": "SCK", "color": "DP - brown" },
-                    {"pin": "05", "name": "SS", "color": "DP - red" }
+                    {"pin": "02", "name": "MISO", "color": "DP - grey" },
+                    {"pin": "05", "name": "MOSI", "color": "DP - blue" },
+                    {"pin": "01", "name": "SCK", "color": "DP - brown" },
+                    {"pin": "04", "name": "SS", "color": "DP - red" }
                 ]
             },
             {
@@ -43,16 +43,16 @@
             {
                 "feature": "ROWS",
                 "pins": [
-                    {"pin": "14", "name": "row 01", "color": "stranded brown" },
-                    {"pin": "12", "name": "row 02", "color": "stranded green" },
-                    {"pin": "11", "name": "row 03", "color": "stranded blue" },
-                    {"pin": "27", "name": "row 04", "color": "stranded orange" },
-                    {"pin": "29", "name": "row 05", "color": "stranded brown" }
+                    {"pin": "14", "name": "row 01, top", "color": "stranded brown" },
+                    {"pin": "12", "name": "row 02, mid", "color": "stranded green" },
+                    {"pin": "11", "name": "row 03, bottom", "color": "stranded blue" },
+                    {"pin": "27", "name": "row 04, thumbs", "color": "stranded orange" },
+                    {"pin": "29", "name": "row 05, mouse keys", "color": "stranded brown" }
                 ]
             }
         ],
         "cols": ["GP26", "GP25", "GP24", "GP22", "GP21", "GP20", "GP19", "GP17", "GP16", "GP15"],
-        "rows": ["GPx", "GPx", "GPx", "GPx", "GPx"]
+        "rows": ["GP14", "GP12", "GP11", "GP27", "GP29"]
     },
 
     "diode_direction": "ROW2COL",
