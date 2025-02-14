@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────────────────────┤ ├───────────────────────────────────────────────────────────────────╯
        LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),   LT(L_SYM, KC_ENT), LT(L_NUM, KC_BSPC), LT(L_FUN, KC_DEL),
   //  ╰────────────────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT,  QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [L_DVORAK] = LAYOUT_4x5_3(
@@ -146,20 +146,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────────────────────┤ ├───────────────────────────────────────────────────────────────────╯
        LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),   LT(L_SYM, KC_ENT), LT(L_NUM, KC_BSPC), LT(L_FUN, KC_DEL),
   //  ╰────────────────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [L_MEDIA] = LAYOUT_4x5_3(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       DF(L_DVORAK), DF(L_QWERTY), DF(_ART_BASE), XXXXXXX, QK_BOOT,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_MRWD, KC_VOLD, KC_VOLU, KC_MFFD,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       AC_ON, AC_OFF, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          _______, XXXXXXX, XXXXXXX,    KC_MSTP, KC_MPLY, KC_MUTE,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
 
@@ -173,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, _______, XXXXXXX,     KC_ENT, KC_BSPC, KC_DEL,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [L_MOUSE] = LAYOUT_4x5_3(
@@ -186,7 +186,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, _______,    MS_BTN3, MS_BTN1, MS_BTN2,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [L_SYM] = LAYOUT_4x5_3(
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          KC_LPRN, KC_RPRN, KC_UNDS,    _______, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
 
@@ -213,7 +213,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                           KC_DOT,    KC_0, KC_MINS,    XXXXXXX, _______, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [L_FUN] = LAYOUT_4x5_3(
@@ -226,7 +226,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                           KC_APP,  KC_SPC,  KC_TAB,    XXXXXXX, XXXXXXX, _______,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   //========================================================================================================================================
@@ -244,7 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_NUM] = LAYOUT_4x5_3(
@@ -257,7 +257,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_CUS] = LAYOUT_4x5_3(
@@ -270,7 +270,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_PUNC] = LAYOUT_4x5_3(
@@ -283,7 +283,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_MOU] = LAYOUT_4x5_3(
@@ -296,7 +296,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_NAV] = LAYOUT_4x5_3(
@@ -309,7 +309,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 
   [_ART_SYM] = LAYOUT_4x5_3(
@@ -322,7 +322,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,
   //                   ╰───────────────────────────╯ ╰──────────────────────────╯
-           KC_LEFT,     KC_DOWN,       KC_UP,     KC_RGHT, QK_BOOT
+           MS_BTN1,     MS_BTN3,       MS_BTN2,     MS_BTN1,  MS_BTN3
   ),
 };
 // clang-format on
