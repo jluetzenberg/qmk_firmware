@@ -1,10 +1,12 @@
+AUTOCORRECT_ENABLE = yes
 #==============================================================
 # Trackpad Settings
 #==============================================================
 # POINTING_DEVICE_ENABLE = yes
 # SPI config
+POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
-CIRQUE_PINNACLE_SPI_CS_PIN = GP4
+CIRQUE_PINNACLE_SPI_CS_PIN = GP2
 
 # General Settings and Information
 CIRQUE_PINNACLE_DIAMETER_MM = 40

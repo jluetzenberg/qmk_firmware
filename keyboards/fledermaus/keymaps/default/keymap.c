@@ -27,7 +27,7 @@ void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
   debug_enable=true;
   //debug_matrix=true;
-  //debug_keyboard=true;
+  debug_keyboard=true;
   debug_mouse=true;
 };
 
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_SCLN,        KC_Q,        KC_J,        KC_K,    KC_X,                    KC_B,         KC_M,         KC_W,         KC_V,         KC_Z,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX, LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),   LT(L_SYM, KC_ENT), LT(L_NUM, KC_BSPC), LT(L_FUN, KC_DEL), XXXXXXX, XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_QWERTY] = LAYOUT_ortho_5x10(
@@ -68,7 +68,7 @@ XXXXXXX, XXXXXXX, LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),  
               KC_Z,        KC_X,        KC_C,        KC_V,    KC_B,                    KC_N,         KC_M,      KC_COMM,       KC_DOT,         KC_QUOT,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX, LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),   LT(L_SYM, KC_ENT), LT(L_NUM, KC_BSPC), LT(L_FUN, KC_DEL), XXXXXXX, XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_MEDIA] = LAYOUT_ortho_5x10(
@@ -80,19 +80,19 @@ XXXXXXX, XXXXXXX, LT(L_MEDIA, KC_ESC), LT(L_NAV, KC_SPC), LT(L_MOUSE, KC_TAB),  
            XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,                 XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                _______,     XXXXXXX,     XXXXXXX,                 KC_MSTP,      KC_MPLY,      KC_MUTE,      XXXXXXX,      XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_NAV] = LAYOUT_ortho_5x10(
   // ╭─────────────────────────────────────────────────────────────╮                 ╭───────────────────────────────────────────────────────────────────╮
-           XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,  XXXXXXX,                XXXXXXX,      KC_PSTE,      KC_COPY,       KC_CUT,      KC_UNDO,
+        DF(L_DVORAK), DF(L_QWERTY), XXXXXXX,XXXXXXX, QK_BOOT,                XXXXXXX,      KC_PSTE,      KC_COPY,       KC_CUT,      KC_UNDO,
   // ├─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────┤
            KC_LGUI,     KC_LALT,     KC_LCTL,     KC_LSFT, XXXXXXX,                 KC_CAPS,      KC_LEFT,      KC_DOWN,        KC_UP,      KC_RGHT,
   // ├─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────┤
-           XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,                  KC_INS,      KC_HOME,      KC_PGDN,      KC_PGUP,       KC_END,
+           AC_ON,     AC_OFF,     AC_TOGG,     XXXXXXX, DB_TOGG,                  KC_INS,      KC_HOME,      KC_PGDN,      KC_PGUP,       KC_END,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                XXXXXXX,     _______,     XXXXXXX,                  KC_ENT,      KC_BSPC,       KC_DEL,      XXXXXXX,      XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_MOUSE] = LAYOUT_ortho_5x10(
@@ -104,7 +104,7 @@ XXXXXXX, XXXXXXX,                XXXXXXX,     _______,     XXXXXXX,             
            XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,                 XXXXXXX,      MS_WHLL,      MS_WHLD,      MS_WHLU,       MS_WHLR,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                XXXXXXX,     XXXXXXX,     _______,                 MS_BTN3,      MS_BTN1,      MS_BTN2,      XXXXXXX,       XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_SYM] = LAYOUT_ortho_5x10(
@@ -116,7 +116,7 @@ XXXXXXX, XXXXXXX,                XXXXXXX,     XXXXXXX,     _______,             
            KC_TILD,     KC_EXLM,       KC_AT,     KC_HASH, KC_PIPE,                 XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                    KC_LPRN,     KC_RPRN, KC_UNDS,                 _______,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_NUM] = LAYOUT_ortho_5x10(
@@ -128,7 +128,7 @@ XXXXXXX, XXXXXXX,                    KC_LPRN,     KC_RPRN, KC_UNDS,             
             KC_GRV,        KC_1,        KC_2,        KC_3, KC_BSLS,                 XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                     KC_DOT,        KC_0, KC_MINS,                 XXXXXXX,      _______,      XXXXXXX,      XXXXXXX,       XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
     [L_FUN] = LAYOUT_ortho_5x10(
@@ -140,7 +140,10 @@ XXXXXXX, XXXXXXX,                     KC_DOT,        KC_0, KC_MINS,             
             KC_F10,       KC_F1,       KC_F2,       KC_F3, KC_PAUS,                 XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                     KC_APP,      KC_SPC,  KC_TAB,                 XXXXXXX,      XXXXXXX,      _______,      XXXXXXX,       XXXXXXX,
-       MS_BTN3, MS_BTN1, XXXXXXX, MS_BTN2, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     )
+
+
+ 
 
 };
