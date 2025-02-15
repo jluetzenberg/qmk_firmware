@@ -1,5 +1,6 @@
 :guage     -> gauge
 :the:the:  -> the
+:teh:      -> the
 :thier     -> their
 :ture      -> true
 accomodate -> accommodate

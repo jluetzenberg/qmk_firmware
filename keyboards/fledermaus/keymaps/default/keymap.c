@@ -89,7 +89,7 @@ XXXXXXX, XXXXXXX,                _______,     XXXXXXX,     XXXXXXX,             
   // ├─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────┤
            KC_LGUI,     KC_LALT,     KC_LCTL,     KC_LSFT, XXXXXXX,                 KC_CAPS,      KC_LEFT,      KC_DOWN,        KC_UP,      KC_RGHT,
   // ├─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────┤
-           AC_ON,     AC_OFF,     AC_TOGG,     XXXXXXX, DB_TOGG,                  KC_INS,      KC_HOME,      KC_PGDN,      KC_PGUP,       KC_END,
+           AC_ON,     AC_OFF,   QK_AUTOCORRECT_TOGGLE,     XXXXXXX, DB_TOGG,                  KC_INS,      KC_HOME,      KC_PGDN,      KC_PGUP,       KC_END,
   // ╰─────────────────────────────────────────────────────────────┤                 ├───────────────────────────────────────────────────────────────────╯
 XXXXXXX, XXXXXXX,                XXXXXXX,     _______,     XXXXXXX,                  KC_ENT,      KC_BSPC,       KC_DEL,      XXXXXXX,      XXXXXXX,
        MS_BTN2, MS_BTN1, XXXXXXX, MS_BTN1, MS_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -144,6 +144,6 @@ XXXXXXX, XXXXXXX,                     KC_APP,      KC_SPC,  KC_TAB,             
     )
 
 
- 
+
 
 };
